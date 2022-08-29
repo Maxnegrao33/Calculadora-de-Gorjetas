@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--Chamando o CSS no documento-->
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora de Gorjetas</title>
+</head>
+<body>
+    <div id="container">
+        <div>
+        <h1 class="title">Calculadora de Gorjetas</h1>
+
+        </div>
+
+        <div>
+            <form class="tipsForm" id="tipsForm">
+                <label for="bill">
+                    <p>Qual o valor da conta? </p>
+
+                </label>
+                    <p>
+                        <!--required, é uma função que não permite deixar o campo em branco-->
+                        R$ <input type="number" placeholder="100" name="bill" id="bill" class="formInput" required>
+                    </p>
+                    <hr>
+                <label for="serviceQuality">
+                    <p>Como foi seu serviço?</p>
+                </label>
+                <p>
+                    <!--A tag select possibilita escolher valores predefinidos-->
+                    <select name="serviceQuality" id="serviceQuality" class="formSelect" required>
+                       
+                        <!--Tag para ilustrar a opção de escolha (desabilitada)-->
+                        <option disabled selected value="0">--Escolha uma opção--</option>
+                        <option value="0.0">0% - Péssimo</option>
+                        <option value="0.05">5% - Ruim</option>
+                        <option value="0.15">10% - Aceitável</option>
+                        <option value="0.2">15% - Bom</option>
+                        <option value="0.3">30% - Excelente</option>
+                    </select>
+                </p>
+                <hr>
+                <label for="peoples">
+                    <p>Quantas pessoas irão dividir a conta?</p>        
+                        <input type="number" placeholder="1" name="peoples" id="peoples" class="formInput" required> Pessoa(s)<br><br>
+
+                    <button type="submit" class="formSubmit">Calcular</button>
+                </label>
+                
+                <div id="totalTips">
+                    Gorjeta total:
+                    R$<span id="tip">0.00</span>
+                        <span id="each">cada</span>
+                </div>
+            </form>
+
+        </div>
+    </div>
+   
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
